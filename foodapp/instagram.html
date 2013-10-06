@@ -1,0 +1,48 @@
+<?
+$user_id = "376080995"; //userid
+$num_to_display = "20"; //instagram limits to max 20, but you can do less for your layout.
+$access_token = "376080995.5b9e1e6.e3cdf1450ae345308e32fb59dc1d6150"; 
+?>
+
+<style>
+.instagram-placeholder {
+float: left;
+}
+</style>
+
+<h1>jQuery Instagram User Stream Display Really Easy with a json call</h1>
+uses jQuery and json to get an instagram user feed and display it on your site.
+<br/>
+<br/>
+<a href="http://stuffthatspins.com/2012/03/30/display-instagram-picture-stream-really-easy-with-jquery-and-json/">Source Code Download</a>
+
+<br/>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<div class="instagram"></div>
+
+<script>
+
+//HELP FROM HERE... THANKS!
+//https://forrst.com/posts/Using_the_Instagram_API-ti5
+
+// small = + data.data[i].images.thumbnail.url +
+// resolution: low_resolution, thumbnail, standard_resolution
+
+$(function() {
+    $.ajax({
+    	type: "GET",
+        dataType: "jsonp",
+        cache: false,
+        url: "https://api.instagram.com/v1/users/<?=$user_id?>/media/recent/?access_token=<?=$access_token?>",
+        success: function(data) {
+            for (var i = 0; i < <?=$num_to_display?>; i++) {
+        $(".instagram").append("<div class='instagram-placeholder'><a target='_blank' href='" + data.data[i].link +"'><img class='instagram-image' src='" + data.data[i].images.low_resolution.url +"' /></a></div>");   
+      		}     
+                            
+        }
+    });
+});
+
+</script>
+
