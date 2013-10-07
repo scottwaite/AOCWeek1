@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  foodapp
+//  CrystalBall
 //
-//  Created by Scott Waite on 10/5/13.
+//  Created by Scott Waite on 10/6/13.
 //  Copyright (c) 2013 Scott Waite. All rights reserved.
 //
 
@@ -12,43 +12,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // The theme for the app is food in a refrigerator.
-    
-    
-    
-    
-
-    
-    
-    //For Loop - (How many eggs are in a carton?)
-    
-    
-    int dozenEggs = 12;
-    
-    for (int i=0; dozenEggs<12; i++)
-    {
-        dozenEggs += dozenEggs;
-    }
-    
-    NSLog (@" A full carton of eggs = %i", dozenEggs);
-    
-    
-    
-
-    // While loop - (The number of eggs left in the carton)
-    int main (int argc, char *argv[]);
-    {
-        int i = 0;
-        do
-        {
-            i++;
-            NSLog (@"The number of eggs left in the carton is = %i", i);
-        } while (i < 12);
-    }
-
-    
-    
-    
     // Override point for customization after application launch.
     return YES;
 }
@@ -80,9 +43,4 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
-
-
 @end
-
-
