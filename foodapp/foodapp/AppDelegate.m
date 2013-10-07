@@ -13,40 +13,39 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // The theme for the app is food in a refrigerator.
-    
-    
-    
-    
-
-    
-    
     //For Loop - (How many eggs are in a carton?)
-    
-    
     int dozenEggs = 12;
     
-    for (int i=0; dozenEggs<12; i++)
-    {
+    for (int i = 0; dozenEggs < 12; i++) {
         dozenEggs += dozenEggs;
     }
     
-    NSLog (@" A full carton of eggs = %i", dozenEggs);
+    NSLog(@" A full carton of eggs = %i", dozenEggs);
+    
+    
+    //Boolean value, if else, float, and or comparison.
+    
+    float cold = 32;
+    int temp = 60;
+    BOOL fridgeOn = YES;
+    if ((fridgeOn == NO) || (cold > 33)) {
+        NSLog(@"The fridge is off.");
+    } else if ((temp < 32) && (temp > 0)) {
+        NSLog(@"The fridge is on and working");
+    } else {
+        NSLog(@"The fridge is off and the food is probably going to go bad.");
+    }
     
     
     
-
     // While loop - (The number of eggs left in the carton)
-    int main (int argc, char *argv[]);
-    {
+    int main(int argc, char * argv[]); {
         int i = 0;
-        do
-        {
+        do {
             i++;
-            NSLog (@"The number of eggs left in the carton is = %i", i);
+            NSLog(@"The number of eggs left in the carton is = %i", i);
         } while (i < 12);
     }
-
-    
     
     
     // Override point for customization after application launch.
